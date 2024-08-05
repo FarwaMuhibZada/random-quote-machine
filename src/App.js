@@ -13,7 +13,7 @@ const getRandomColor = () => {
   return `rgb(${red}, ${green}, ${blue})`;
 };
 
-const transition = "all 1s";
+const transition = 'all 1s';
 
 function App() {
   const [quote, setQuote] = useState(getRandomQuote());
@@ -34,12 +34,12 @@ function App() {
           className="quote-content"
           style={{ color: randomColor, transition }}
         >
-          <h2 id="text">
+          <h2 id='text'>
             <FaQuoteLeft size="30" style={{ marginRight: "10px" }} />
             {quote.quote}
             <FaQuoteRight size="30" style={{ marginLeft: "10px" }} />
           </h2>
-          <h4 id="author">{quote.author}</h4>
+          <h4 id='author'>{quote.author}</h4>
         </div>
         <div className="buttons">
           <a
@@ -50,7 +50,7 @@ function App() {
               marginRight: "10px",
               transition,
             }}
-            aria-label="Tweet this quote"
+            aria-label='Tweet this quote'
           >
             <FaTwitter color="white" />
           </a>
