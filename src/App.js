@@ -1,9 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaTwitter, FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
-import quotes from './assets/quotes.json';
 import './App.css';
-
-const getRandomQuote = () => quotes[Math.floor(Math.random() * quotes.length)];
 
 const getRandomColor = () => {
   const red = Math.floor(Math.random() * 128);
@@ -15,11 +12,25 @@ const getRandomColor = () => {
 const transition = 'all 1s';
 
 function App() {
-  const [quote, setQuote] = useState(getRandomQuote());
+  const [quotes, setQuotes] = useState([]);
+  const [quote, setQuote] = useState({});
   const [randomColor, setRandomColor] = useState(getRandomColor());
 
+  useEffect(() => {
+    const fetchQuotes = async () => {
+      const data = await fetch(
+        'https://gist.githubusercontent.com/natebass/b0a548425a73bdf8ea5c618149fe1fce/raw/f4231cd5961f026264bb6bb3a6c41671b044f1f4/quotes.json'
+      );
+      const quotes = await data.json();
+      setQuotes(quotes);
+      setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+    };
+
+    fetchQuotes();
+  }, []);
+
   const changeQuote = () => {
-    setQuote(getRandomQuote());
+    setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
     setRandomColor(getRandomColor());
   };
 
