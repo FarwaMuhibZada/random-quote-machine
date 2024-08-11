@@ -25,6 +25,9 @@ The Random Quote Machine is a simple web application that displays random quotes
 10. I can tweet the current quote by clicking on the `#tweet-quote` `a` element. This `a` element should include the `"twitter.com/intent/tweet"` path in its `href` attribute to tweet the current quote.
 11. The `#quote-box` wrapper element should be horizontally centered. Please run tests with the browser's zoom level at 100% and the page maximized.
 
+### API link 
+https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json
+
 ## Demo 📸
 
 ![Random Quote Machine Screenshot](./src/assets/Capture.PNG)
