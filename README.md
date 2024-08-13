@@ -32,7 +32,7 @@ https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/ra
 
 ![Random Quote Machine Screenshot](./src/assets/Capture.PNG)
 
-
+deployment link: [(https://random-qoute-machine-farwamuhibzada.netlify.app/)]
 ## Technologies Used 💡
 
 - React
